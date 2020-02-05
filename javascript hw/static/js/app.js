@@ -2,7 +2,7 @@
 var tableData = data;
 
 // YOUR CODE HERE!
-var banana=3.select("tbody"):
+var banana=d3.select("tbody");
 
 function table(data) {
     data.forEach((dataRow) => {    
@@ -21,12 +21,12 @@ function table(data) {
   function clickk() {
 
     var date_of_thing = d3.select("#datetime").property("value");
-    var filteredData = tableData;
+    var filteredData = table;
     if (date) {
       filteredData = filteredData.filter(row => date);
     }
     buildTable(filteredData);
   }
-  d3.selectAll("#filte").on("click", clickk);
-  buildTable(tableData);
+  d3.selectAll("#filter").on("click", clickk);
+  buildTable(table);
   
